@@ -1,4 +1,5 @@
-﻿@model TrabalhoADO.Areas.Painel.Models.Empresa
+﻿@using TrabalhoADO.Areas.Painel.Models
+@model Empresa
 @{
     ViewBag.Title = "Update";
     Layout = "~/Areas/Painel/Views/Shared/_Layout.cshtml";
@@ -12,29 +13,31 @@
         <div class="control-group">
             <label class="control-label">Nome</label>
             <div>
-                <input id="Nome" name="Nome" type="text" placeholder="Nome" required>
-                <p class="help-block">* Campo Obrigatório</p>
+                <input id="Nome" name="Nome" type="text" value="@Model.Nome" placeholder="Nome" required>
+                <p class="help-block"></p>
             </div>
 
             <label class="control-label">Telefone</label>
             <div>
-                <input id="Telefone" name="Telefone" type="text" placeholder="Telefone" required>
-                <p class="help-block">* Campo Obrigatório</p>
+                <input id="Telefone" name="Telefone" value="@Model.Telefone" type="text" placeholder="Telefone" required>
+                <p class="help-block"></p>
             </div>
 
             <label class="control-label">Endereco</label>
             <div>
-                <input id="Endereco" name="Endereco" type="text" placeholder="Endereco" required>
-                <p class="help-block">* Campo Obrigatório</p>
+                <input id="Endereco" name="Endereco" value="@Model.Endereco" type="text" placeholder="Endereco" required>
+                <p class="help-block"></p>
             </div>
-        </div>
+            <label class="control-label">Categoria</label>
+            <div>
+                <select id="CategoriaId" name="CategoriaId">
+                    @foreach (var item in (List<Categoria>)ViewBag.listaCategorias)
+                    {
+                        <option value="@item.CategoriaId" selected>@item.NomeCategoria</option>
+                    }
+                </select>
+            </div>
 
-        <!-- File Button -->
-        <div class="control-group">
-            <label class="control-label">Foto</label>
-            <div class="controls">
-                <input id="foto" name="foto" class="input-file" type="file">
-            </div>
         </div>
 
         <!-- Button -->

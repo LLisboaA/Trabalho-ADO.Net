@@ -5,22 +5,16 @@
 }
 
 <div class="container">
-    <br />
-    <div id="login-wraper">
-        <form class="form login-form" method="POST" action="">
-            <legend>Sign in to <span class="blue">Trabalho ADO</span></legend>
-            <div class="body">
-                <label>Usuário</label>
-                <input type="text" name="User" id="User">
-                <br />
-                <label>Senha</label>
-                <input type="password" name="Pass" id="Pass">
-            </div>
+    <div id="wraper">
+        <form class="form-login" method="POST" action="">
+            <div class="title">Login</div>
+            <section class="inputs"> 
+                @Html.TextBoxFor(x => x.UserName, new {@placeholder="Usuário"}) <br />
 
-            <div class="footer">
-                <button type="submit" class="btn btn-success">Login</button>
-            </div>
+                @Html.PasswordFor(x => x.Pass, new { @placeholder = "Senha" })
+            </section>
+                <button type="submit" class="btnLogar">Entrar</button>
         </form>
     </div>
-
 </div>
+

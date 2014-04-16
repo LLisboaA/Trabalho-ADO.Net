@@ -12,5 +12,7 @@ namespace TrabalhoADO.Areas.Painel.Models
         public string Nome { get; set; }
         public string Telefone { get; set; }
         public string Endereco { get; set; }
+        public int CategoriaId { get; set; }
+        public string NomeCategoria { get; set; }
     }
 }

@@ -77,6 +77,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Painel\Content\Imagens-login\Fundo.jpg" />
+    <Content Include="Areas\Painel\Content\Imagens-login\TextBox.jpg" />
+    <Content Include="Areas\Painel\Content\login.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -99,6 +102,9 @@
     <Content Include="Areas\Painel\Views\Painel\NovoCadastro.cshtml" />
     <Content Include="Areas\Painel\Views\Painel\Update.cshtml" />
     <Content Include="Areas\Painel\Views\Painel\Detalhes.cshtml" />
+    <Content Include="Areas\Painel\Content\Imagens-login\Thumbs.db" />
+    <None Include="Properties\PublishProfiles\ado.pubxml" />
+    <None Include="Properties\PublishProfiles\trabalhoado.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -114,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Painel\Models\Categoria.cs" />
     <Compile Include="Areas\Painel\Controllers\PainelController.cs" />
     <Compile Include="Areas\Painel\Models\Empresa.cs" />
     <Compile Include="Areas\Painel\Models\Usuario.cs" />
